@@ -182,7 +182,3 @@ Close Windows Terminal before restoring its settings. Find the timestamped `.bak
 ## Contributing
 
 Suggestions, bug reports, and pull requests are welcome. Please include your Windows version, PowerShell version, and any warning or error output when reporting a problem. Do not post personal paths, tokens, or other sensitive information in an issue.
-
-## License
-
-No license is included yet. Add a `LICENSE` file before publishing the project if you want to specify how others may use, modify, and redistribute it.
