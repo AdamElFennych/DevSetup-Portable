@@ -493,8 +493,11 @@ function killport {
     }
 }
 
+# The built-in alias 'gi' (Get-Item) takes priority over functions, so remove it first.
+if (Test-Path Alias:gi) { Remove-Item Alias:gi -Force -ErrorAction SilentlyContinue }
 function gi {
-    param([Parameter(Mandatory = $true)][string]$List)
+    param([Parameter(Mandatory = $true, ValueFromRemainingArguments = $true)][string[]]$List)
+    $List = ($List -join ',') -replace '\s+', ''
     $gitignorePath = Join-Path (Get-Location) '.gitignore'
     if (Test-Path -LiteralPath $gitignorePath) {
         $confirmation = Read-Host '.gitignore already exists. Type YES to replace it'
