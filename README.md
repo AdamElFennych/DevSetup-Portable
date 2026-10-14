@@ -22,25 +22,25 @@ The goal is to recreate a consistent terminal workflow on another Windows PC wit
 
 The script uses `winget` to install or check the following packages:
 
-| Tool | Purpose |
-| --- | --- |
-| Windows Terminal | Terminal emulator |
-| PowerShell 7 | Modern PowerShell shell |
-| Git | Version control |
-| Starship | Customizable shell prompt |
-| JetBrainsMono Nerd Font | Font with programming glyphs and icons |
-| `gsudo` | Run commands with elevated privileges |
-| `eza` | Enhanced directory listings |
-| `zoxide` | Smart directory navigation (`z`) |
-| `fzf` | Interactive fuzzy finder |
-| `bat` | File viewer with syntax highlighting |
-| `fd` | Fast file search |
-| `ripgrep` (`rg`) | Fast text search |
-| `lazygit` | Terminal UI for Git |
-| `delta` | Enhanced Git diff viewer |
-| Carapace | Shell completions for many command-line tools |
-| Yazi | Terminal file manager |
-| GitHub CLI (`gh`) | Work with GitHub from the terminal |
+| Tool                    | Purpose                                       |
+| ----------------------- | --------------------------------------------- |
+| Windows Terminal        | Terminal emulator                             |
+| PowerShell 7            | Modern PowerShell shell                       |
+| Git                     | Version control                               |
+| Starship                | Customizable shell prompt                     |
+| JetBrainsMono Nerd Font | Font with programming glyphs and icons        |
+| `gsudo`                 | Run commands with elevated privileges         |
+| `eza`                   | Enhanced directory listings                   |
+| `zoxide`                | Smart directory navigation (`z`)              |
+| `fzf`                   | Interactive fuzzy finder                      |
+| `bat`                   | File viewer with syntax highlighting          |
+| `fd`                    | Fast file search                              |
+| `ripgrep` (`rg`)        | Fast text search                              |
+| `lazygit`               | Terminal UI for Git                           |
+| `delta`                 | Enhanced Git diff viewer                      |
+| Carapace                | Shell completions for many command-line tools |
+| Yazi                    | Terminal file manager                         |
+| GitHub CLI (`gh`)       | Work with GitHub from the terminal            |
 
 The generated Windows Terminal PowerShell 7 profile uses `-NoLogo -NoProfileLoadTime` to hide the startup banner and profile-load timing message while still loading your profiles.
 
@@ -59,25 +59,25 @@ If a module is already loaded in the running PowerShell session, the script leav
 
 ### Aliases and helper functions
 
-| Command | Description |
-| --- | --- |
-| `ls`, `l` | List files with `eza` icons |
-| `ll` | Detailed listing with Git information |
-| `la` | Detailed listing including hidden files |
-| `lt` | Directory tree view |
-| `cat` | Uses `bat` when installed |
-| `grep` | Uses `rg` when installed |
-| `lg` | Opens `lazygit` |
-| `sudo` | Uses `gsudo` when installed |
-| `mkcd <path>` | Create a directory and enter it |
-| `ports` | Show TCP ports in the listening state and their owning processes |
-| `killport <port>` | Stop processes associated with a local port |
-| `fcode` | Select a file with `fzf` preview and open it in VS Code, if `code` is available |
-| `fkill` | Select a process interactively and stop it |
-| `gi <languages>` | Generate a `.gitignore` file using the Toptal gitignore API |
-| `y` | Open Yazi and change to its final directory on exit |
-| `which <name>` | Show the resolved command path or definition |
-| `z <directory>` | Jump to a frequently used directory with `zoxide` |
+| Command           | Description                                                                     |
+| ----------------- | ------------------------------------------------------------------------------- |
+| `ls`, `l`         | List files with `eza` icons                                                     |
+| `ll`              | Detailed listing with Git information                                           |
+| `la`              | Detailed listing including hidden files                                         |
+| `lt`              | Directory tree view                                                             |
+| `cat`             | Uses `bat` when installed                                                       |
+| `grep`            | Uses `rg` when installed                                                        |
+| `lg`              | Opens `lazygit`                                                                 |
+| `sudo`            | Uses `gsudo` when installed                                                     |
+| `mkcd <path>`     | Create a directory and enter it                                                 |
+| `ports`           | Show TCP ports in the listening state and their owning processes                |
+| `killport <port>` | Stop processes associated with a local port                                     |
+| `fcode`           | Select a file with `fzf` preview and open it in VS Code, if `code` is available |
+| `fkill`           | Select a process interactively and stop it                                      |
+| `gi <languages>`  | Generate a `.gitignore` file using the Toptal gitignore API                     |
+| `y`               | Open Yazi and change to its final directory on exit                             |
+| `which <name>`    | Show the resolved command path or definition                                    |
+| `z <directory>`   | Jump to a frequently used directory with `zoxide`                               |
 
 `Ctrl+R` is configured for fuzzy history search and `Ctrl+T` for fuzzy file selection through PSFzf, when the relevant tools and modules are available.
 
@@ -182,3 +182,7 @@ Close Windows Terminal before restoring its settings. Find the timestamped `.bak
 ## Contributing
 
 Suggestions, bug reports, and pull requests are welcome. Please include your Windows version, PowerShell version, and any warning or error output when reporting a problem. Do not post personal paths, tokens, or other sensitive information in an issue.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
